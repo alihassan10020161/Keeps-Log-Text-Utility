@@ -1,0 +1,29 @@
+
+{%extends 'base.html'%}
+{% block content %}
+
+<div class="container">
+
+<h1>Your Analyzed Text - {{ purpose }}</h1>
+
+<div style="position:relative;" class="bg-light">
+<p>
+    <div class="row">
+<div class="col-10 m-2">
+    <pre  id="copy-text" class="p-4"><h2>{{ analyzed_text }}</h2></pre>
+</div>
+    <div class="col-1 m-2">
+        <button id="corner-btn" class="btn btn-outline-primary" onclick="copy()">
+        Copy
+        </button>
+    </div>
+</div>
+</p>
+</div>
+
+    <span class="badge badge-success">  {{analyzed_text|length }} </span> Characters
+
+
+</div>
+{%endblock%}
+
